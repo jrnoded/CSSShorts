@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  background: hsl(0, 50%, 50%);
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 15px,
+    rgba(42, 42, 42, 1) 140px,
+    rgba(255, 255, 255, 1) 45px,
+    rgba(96, 96, 96, 1) 20px,
+    rgba(255,255,255,1) 10px
+  );
+}

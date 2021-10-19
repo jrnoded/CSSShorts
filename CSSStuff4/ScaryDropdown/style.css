@@ -1,0 +1,134 @@
+* {
+	box-sizing: border-box;
+}
+label {
+	text-align: center;
+	display: block;
+}
+:root {
+	--select-border: hsl(39, 98%, 49%);
+	--select-focus: blue;
+	--select-arrow: var(--select-border);
+}
+body,
+html {
+	height: 100%;
+	display: grid;
+	/* 	background: rgb(240, 131, 32); */
+	background: radial-gradient(
+		circle,
+		rgba(240, 131, 32, 1) 0%,
+		rgba(0, 0, 0, 1) 100%
+	);
+	font-family: "Are You Serious", cursive;
+	font-size: 1.5rem;
+}
+.container {
+	display: grid;
+}
+.dropdown {
+	margin: auto;
+	height: 8rem;
+}
+.dropdown #monster-select {
+	appearance: none;
+	background-color: transparent;
+	border: none;
+
+	font-family: inherit;
+	cursor: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	outline: none;
+	display: grid;
+	grid-template-areas: "select";
+	text-align: center;
+	/* font-size: 1rem; */
+	z-index: 1;
+}
+.dropdown #monster-select,
+.dropdown .select::after {
+	grid-area: select;
+}
+.dropdown .select {
+	width: 100%;
+	min-width: 25ch;
+	max-width: 60ch;
+	border: 1px solid var(--select-border);
+	border-radius: 0.25em;
+	padding: 0.5em 2em;
+	font-size: 1rem;
+	line-height: 1.4;
+	cursor: pointer;
+	text-align: center;
+	position: relative;
+	animation: selected 5s infinite;
+}
+@keyframes selected {
+	50% {
+		font-size: 1.5rem;
+	}
+}
+.dropdown .select::after {
+	position: absolute;
+	content: "";
+	top: 0.5em;
+	right: 0.5em;
+	width: 0.8em;
+	height: 0.5em;
+	background-color: var(--select-arrow);
+	clip-path: polygon(100% 0%, 0% 0%, 50% 100%);
+}
+.dropdown .select::before {
+	position: absolute;
+	content: "";
+	top: 0.5em;
+	left: 0.5em;
+	width: 0.8em;
+	height: 0.5em;
+	background-color: var(--select-arrow);
+	clip-path: polygon(100% 0%, 0% 0%, 50% 100%);
+}
+.images {
+	display: grid;
+	justify-content: center;
+}
+.image {
+	border: 1px solid var(--select-border);
+	border-radius: 1rem;
+	overflow: hidden;
+}
+
+.image p {
+	text-align: center;
+}
+.rotate {
+	transform: rotate(90deg);
+	margin-left: 2rem;
+}
+#skeleton,
+#ghoul,
+#ghost,
+#marshmallow-monster,
+#vampire,
+#werewolf,
+#about {
+	display: none;
+	width: 367px;
+	height: 470px;
+	box-shadow: 5px 5px 30px hsl(0 0% 0% / 0.2);
+}
+#skeleton.active,
+#ghoul.active,
+#ghost.active,
+#marshmallow-monster.active,
+#vampire.active,
+#werewolf.active,
+#about.active {
+	display: block;
+}
+#about p {
+	text-align: justify;
+	line-height: 0.9rem;
+	margin: 1rem;
+}

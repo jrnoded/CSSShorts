@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Spoooky Name</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="terrible-text">
+        <label for="name">Your Halloween Name: </label>
+        <input
+          type="text"
+          id="theinput"
+          placeholder="make it spooookyyy!"
+          oninput="ParseName()"
+          maxlength="15"
+        />
+      </div>
+      <div class="tombstone">
+        <div class="stone-text">
+          <p>Here lies poor old</p>
+          <p id="result">What's His Name</p>
+          <p>Into modern CSS</p>
+          <p>He Delved too Deep</p>
+          <p>Couldn't Use Subgrid</p>
+          <p>all he could do was weep!</p>
+        </div>
+      </div>
+      <p class="explain">
+        <sup>1</sup>Older versions of Safari does not do conical gradients!
+      </p>
+    </div>
+    <script>
+      const result = document.getElementById("result");
+
+      function ParseName() {
+        var x = document.getElementById("theinput").value;
+        result.innerHTML = x;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-size: 16px;
+  font-family: "Nerko One", cursive;
+  color: hsl(0, 63%, 1%);
+}
+:is(h1, h2, h3, h4) {
+  text-align: center;
+}
+.menu {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  padding: 3rem;
+  margin: 3rem;
+  border: 2px solid black;
+  max-width: 900px;
+  min-width: 450px;
+  background: radial-gradient(black 3px, transparent 4px), radial-gradient(black 3px, transparent 4px), linear-gradient(#fff 4px, transparent 0),
+    linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px), #fff;
+  background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+}
+.card {
+  background: hsla(9, 100%, 64%, 0.8);
+  max-width: 20rem;
+  padding: 2rem 2rem 3rem 2rem;
+  border-radius: 50%;
+  box-shadow: 15px 10px 19px 3px hsla(9, 100%, 32%, 0.25), inset -5px -5px 23px 0px hsla(9, 100%, 32%, 0.75);
+  margin-left: 10%;
+}
+.card :is(h2, h3, h4) {
+  text-align: center;
+  margin: 0.55rem;
+}
+
+.card p {
+  display: flex;
+  justify-content: space-between;
+}
+.menu button {
+  background: hsla(9, 100%, 64%, 0.8);
+  height: 3rem;
+  border-radius: 20px;
+}

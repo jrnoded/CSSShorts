@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: gray;
+}
+.card {
+  width: 300px;
+  aspect-ratio: 1 /1.55;
+  padding: 10px;
+  background: white;
+  display: grid;
+  justify-items: center;
+  border-radius: 4% ;
+}
+.fancy-link {
+  text-decoration: none;
+  font-weight: 900;
+  background-image: linear-gradient(90deg, blue, red);
+  background-size: 0% 3px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 300ms ease;
+}
+.fancy-link:hover {
+  background-size: 100% 3px;
+}
+.profile-img {
+  box-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.3);
+}
+
+p {
+    position: relative;
+    padding-left: 4rem;
+}
+p::before {
+    content: "\261E";
+    font-size: 2.5rem;
+    position: absolute;
+    left: 0;
+}
+span {
+    font-size: 3rem;
+}
+.exampleText {
+  writing-mode: sideways-rl;
+  position: absolute;
+  inset: 20px 40px 30px 10px;
+  background-color: #c8c800;
+}

@@ -1,0 +1,22 @@
+
+
+*{
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: gray;
+}
+:is(h2,h3) {
+    font-family: 'Lobster', sans-serif;
+    text-align: center;
+    /* color: transparent; */
+    color: blue;
+}
+h2 {
+    font-size: 6em;    
+}
+h3 {font-size: 2em}

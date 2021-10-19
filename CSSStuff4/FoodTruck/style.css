@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(240, 11%, 84%);
+}
+h2 {
+  font-family: "Love Ya Like A Sister", cursive;
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+.menu {
+  max-width: 1400px;
+  display: grid;
+  gap: 3rem;  
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "title burgers hot-dogs"
+    "chilli sides drinks";
+  grid-template-rows: auto;
+  justify-content: space-around;
+
+  margin-block: 3em;
+  padding: 3rem;
+
+  background-color: silver;
+  background-image: linear-gradient(335deg, #b00 23px, transparent 23px), linear-gradient(155deg, #d00 23px, transparent 23px),
+    linear-gradient(335deg, #b00 23px, transparent 23px), linear-gradient(155deg, #d00 23px, transparent 23px);
+  background-size: 58px 58px;
+  background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+  position: relative;
+  border: 10px rgb(148, 145, 145) inset;
+}
+
+p {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Shadows Into Light", cursive;
+  font-size: 1.1rem;
+}
+
+.items {
+  margin: 0.625rem;
+  padding: 0.625rem;
+  width: 300px;
+  background: hsl(210, 20%, 26%);
+  border-radius: 0.5rem;
+  border: 1rem solid hsl(23, 79%, 44%);
+  /* color: slategray */
+  box-shadow: 10px 10px 10px hsla(240, 100%, 2%, 0.5);
+  position: relative;
+  z-index: 10;
+}
+
+.items::before {
+  content: "\1F4CC";
+  position: absolute;
+  background: hsl(23, 79%, 44%);
+  width: 60px;
+  height: 50px;
+  top: -66px;
+  border-radius: 50% 50% 0 0;
+  left: calc(50% - 30px);
+  font-size: 2.5rem;
+  text-align: right;
+}
+
+.title {
+  grid-area: "title";
+}
+.burgers {
+  grid-area: "burgers";
+}
+.hot-dogs {
+  grid-area: "hot-dogs";
+}
+.chilli {
+  grid-area: "chilli";
+}
+.sides {
+  grid-area: "sides";
+}
+.drinks {
+  grid-area: "drinks";
+  /* transform: rotate(-4deg); */
+  animation: swing 5s  infinite;
+  transform-origin: top;
+  animation: swing 5s linear infinite;
+  transform-origin: top;
+}
+@keyframes swing {
+  0% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(-4deg);
+  }
+}
+.motto {
+  text-align: center;
+  text-shadow: 0px 0px 30px hsla(0, 0%, 100%, 0.9),
+               10px 0px 30px hsla(0, 0%, 100%, 0.9);
+  /* text-shadow: 10px 10px 20px hsla(0, 0%, 100%, .75),
+              -10px -10px 20px hsla(0, 0%, 100%, .75),
+              20px 20px 30px hsla(0, 0%, 100%, .55);
+} */
